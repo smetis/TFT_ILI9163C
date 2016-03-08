@@ -2047,7 +2047,7 @@ void TFT_ILI9163C::pushColor(uint16_t color) {
 //fast
 void TFT_ILI9163C::drawColorBitmap(int16_t x, int16_t y, int16_t w, int16_t h, const uint32_t *bitmap,bool true24) 
 {
-	if (w > 1 || h < 1) return;
+	if (w < 1 || h < 1) return;
 	int16_t px;
 	uint16_t color;
 	
